@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="2columns-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <referenceContainer name="content">
+            <block class="Learning\Coupon\Block\Component"
+                   name="component-alevel"
+                   template="Learning_Coupon::component.phtml">
+                <aguments>
+                   <argument name="jsLayout" xsi:type="array">
+                       <item name="components" xsi:type="array">
+                           <item name="alevel" xsi:type="array">
+                               <item name="component" xsi:type="string">Learning_Coupon/js/component</item>
+                           </item>
+                       </item>
+                   </argument>
+                </aguments>
+            </block>
+        </referenceContainer>
+
+    </body>
+</page>

@@ -8,9 +8,21 @@
             <class>separator-top</class>
             <label>coupon</label>
             <tab>coupon</tab>
-            <resource>Learning_Coupon::coupon_config</resource>
-            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <resource>Learning_Coupon::coupon_configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="1">
                 <label>General Configuration</label>
+                <field id="enable"
+                       translate="label"
+                       type="select"
+                       sortOrder="5"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1"
+                       canRestore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+
                 <field
                         id="value"
                         translate="label"
@@ -34,6 +46,24 @@
                 >
                     <label>Lifetime</label>
                     <comment>minuts</comment>
+                </field>
+                <field
+                        id="min_sale_qty"
+                       translate="label"
+                       sortOrder="6"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1"
+                       canRestore="1"
+                >
+                    <label>Example</label>
+                    <frontend_model>Magento\CatalogInventory\Block\Adminhtml\Form\Field\Minsaleqty</frontend_model>
+                    <backend_model>Magento\CatalogInventory\Model\System\Config\Backend\Minsaleqty</backend_model>
+                </field>
+                <field id="specificcountry" translate="label" type="multiselect" sortOrder="140" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Specific Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
                 </field>
             </group>
         </section>
